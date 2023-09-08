@@ -1,0 +1,10 @@
+Dockerfile
+.gitignore
+README.json
+documentation
+tests
+
+# Artefacts that will be build during image creation.
+# This should contain all files created during "npm run build"
+dist
+node_modules

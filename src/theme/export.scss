@@ -1,0 +1,21 @@
+/*
+ *   Copyright (c) 2023 Luxembourg Institute of Science and Technology
+ *   All rights reserved.
+ *   See License in the LICENSE file
+ */
+
+// the :export directive is the magic sauce for webpack
+// not working with typescript.
+// The alternative is to create a new file with a .ts extention.
+@import 'variables.scss';
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  accent: $accent;
+  error: $error;
+  info: $info;
+  success: $success;
+  warning: $warning;
+  appbar: $appbar;
+}

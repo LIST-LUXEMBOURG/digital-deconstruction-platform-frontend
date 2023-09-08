@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>DDC Platform</title>
+    <script src="./env-config.js"></script>
+    <!-- Autodesk Forge Viewer files -->
+    <link
+      rel="stylesheet"
+      href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.89/style.min.css"
+      type="text/css"
+    />
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.89/viewer3D.min.js"></script>
+  </head>
+
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but the DDC platform doesn't work properly without
+        JavaScript enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <!-- Browser compatibility -->
+    <script src="js/promise.js"></script>
+    <script src="js/fetch.js"></script>
+  </body>
+</html>

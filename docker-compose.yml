@@ -1,0 +1,27 @@
+version: "3"
+
+# v1 self-signed certificate
+# only for development purposes
+# url: http://localhost:80 or https://localhost:433
+
+# use "letsencrypt" for production
+
+services:
+  nginx:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx/certs/self-signed.cert:/etc/nginx/certs/self-signed.cert
+      - ./nginx/certs/self-signed.key:/etc/nginx/private/self-signed.key
+      - ./nginx/docker-entrypoint.d/60-runtime-env.sh:/docker-entrypoint.d/60-runtime-env.sh
+      - .env/:/usr/share/nginx/html/.env
+    environment:
+      - VUE_APP_BACKEND_URL=${VUE_APP_BACKEND_URL}
+      - VUE_APP_BACKEND_PORT=${VUE_APP_BACKEND_PORT}
+      - VUE_APP_REVERSE_PROXY_PREFIX=${VUE_APP_REVERSE_PROXY_PREFIX}
+      - NGINX_SERVER_NAME=${NGINX_SERVER_NAME}
+      - NGINX_CERT_NAME=${NGINX_CERT_NAME}
+      - NGINX_KEY_NAME=${NGINX_KEY_NAME}

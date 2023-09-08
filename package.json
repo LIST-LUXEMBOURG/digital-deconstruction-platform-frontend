@@ -1,0 +1,66 @@
+{
+  "name": "vfesk",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "serve:itd": "vue-cli-service serve --port 8000",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
+  },
+  "dependencies": {
+    "@mdi/font": "^4.9.95",
+    "@mdi/js": "^6.3.95",
+    "apexcharts": "^3.35.0",
+    "core-js": "^3.18.3",
+    "country-region-data": "^1.11.0",
+    "date-fns": "^2.25.0",
+    "deepmerge": "^4.2.2",
+    "forge-vuer": "^1.1.0",
+    "geodesy": "^2.2.1",
+    "lodash-es": "^4.17.21",
+    "register-service-worker": "^1.7.2",
+    "roboto-fontface": "*",
+    "three": "^0.138.0",
+    "vue": "^2.6.11",
+    "vue-apexcharts": "^1.6.2",
+    "vue-i18n": "^8.26.5",
+    "vue-router": "^3.1.5",
+    "vuetify": "^2.6.5",
+    "vuex": "^3.1.2",
+    "vuex-persist": "^2.2.0"
+  },
+  "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.5.0",
+    "@types/forge-viewer": "^7.61.0",
+    "@types/jest": "^25.2.3",
+    "@types/lodash-es": "^4.17.5",
+    "@types/node": "12.12.22",
+    "@types/three": "^0.137.0",
+    "@types/vue": "^2.0.0",
+    "@types/webpack": "^4.41.31",
+    "@vue/cli-plugin-babel": "^4.5.14",
+    "@vue/cli-plugin-pwa": "^4.5.14",
+    "@vue/cli-plugin-router": "^4.5.14",
+    "@vue/cli-plugin-typescript": "^4.5.14",
+    "@vue/cli-plugin-unit-jest": "^4.5.14",
+    "@vue/cli-plugin-vuex": "^4.5.14",
+    "@vue/cli-service": "^4.5.14",
+    "@vue/test-utils": "^1.2.2",
+    "sass": "^1.32.13",
+    "sass-loader": "^8.0.2",
+    "typescript": "^3.9.10",
+    "vue-cli-plugin-i18n": "^0.6.1",
+    "vue-cli-plugin-vuetify": "^2.4.3",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify-loader": "^1.7.3"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "jest": {
+    "preset": "@vue/cli-plugin-unit-jest"
+  }
+}

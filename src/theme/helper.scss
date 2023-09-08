@@ -1,0 +1,66 @@
+/*
+ *   Copyright (c) 2023 Luxembourg Institute of Science and Technology (LIST)
+ *   All rights reserved.
+ *   For licensing information see the "LICENSE" file in the root directory
+ */
+
+
+// Rotate icon (infinite animation)
+.mdi-spin {
+  -webkit-animation: mdi-spin 2s infinite linear;
+  animation: mdi-spin 2s infinite linear;
+}
+
+@-webkit-keyframes mdi-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes mdi-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+// Rotate icon
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@for $i from 1 through 7 {
+  .mdi-rotate-#{$i*45} {
+    @include rotate($i * 45deg);
+  }
+}
+
+// Flip icon
+
+.mdi-flip-h {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.mdi-flip-v {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
